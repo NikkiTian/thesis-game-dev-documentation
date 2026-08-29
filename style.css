@@ -1,0 +1,156 @@
+@font-face {
+  font-family: "MyFont";
+  src: url("assets/fonts/Aclonica-Regular.ttf") format("truetype");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  background-image: url("assets/images/main_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+a {
+  color: rgb(252, 0, 138);
+}
+
+main {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-family: "MyFont", sans-serif;
+}
+
+.home-title {
+  margin: 10px 0 30px 0;
+
+  text-align: center;
+
+  font-family: "MyFont", sans-serif;
+  font-size: 60px;
+  font-weight: normal;
+  line-height: 0.9;
+
+  color: rgb(0, 37, 247);
+
+  text-shadow: 0 0 10px rgb(200, 255, 0);
+
+  transform: scaleX(1.4) scaleY(0.8) rotate(-3deg);
+}
+
+.entry-list {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  justify-content: center;
+
+  gap: 24px 40px;
+}
+
+.entry {
+  width: fit-content;
+
+  font-family: "MyFont", sans-serif;
+  text-decoration: none;
+}
+
+.entry-text {
+  display: inline;
+
+  font-family: "MyFont", sans-serif;
+
+  color: rgb(252, 0, 138);
+  background-color: yellow;
+
+  filter: blur(2px);
+}
+
+.entry:hover .entry-text {
+  color: rgb(255, 255, 255);
+  background-color: rgb(247, 0, 152);
+
+  filter: blur(0);
+}
+
+.back-button {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+
+  padding: 10px;
+
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.article-image {
+  display: block;
+
+  width: 500px;
+  max-width: 90%;
+  height: auto;
+
+  margin: 30px auto;
+}
+
+.lightbox {
+  display: none;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(236, 167, 210, 0.8);
+
+  z-index: 1000;
+  cursor: zoom-out;
+}
+
+.lightbox.open {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+
+  object-fit: contain;
+}
+
+.title-image {
+  width: 50%;
+  height: auto;
+}
+
+.corner-image {
+  position: fixed;
+  bottom: 0;
+
+  width: 200px;
+  height: auto;
+}
+
+.left-image {
+  left: 0;
+}
+
+.right-image {
+  right: 0;
+}

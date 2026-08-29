@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Entry 01</title>
+
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+  <main>
+
+    <a href="../index.html" class="back-button"> <- Back</a>
+
+    <article>
+      <h1 class="home-title">Entry 01</h1>
+
+      <div class="entry-content">
+        Last class we played a drawing version of the telephone game.
+        <br><br>
+
+        It was a little chaotic but fun, and it reminds me how information can be lost
+        or emphasized differently as it is passed along.
+        <br>
+
+        For information receivers, it's really important that the instructions
+        are clear and concise, and that the information is presented
+        <br>
+        in a way that is easy to understand.
+        <br>
+
+        For information senders, it's important to be aware of how the
+        information is being received and to make adjustments as needed
+        <br>
+        to ensure that the information is being communicated effectively.
+      </div>
+    </article>
+
+    <img
+      src="../assets/images/entry01_note.jpg"
+      alt="Telephone Game"
+      class="article-image"
+    >
+
+    <div class="lightbox" id="lightbox">
+      <img id="lightbox-image" src="" alt="">
+    </div>
+
+  </main>
+
+  <script>
+    const images = document.querySelectorAll(".article-image");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightbox-image");
+
+    images.forEach((image) => {
+      image.addEventListener("click", () => {
+        lightboxImage.src = image.src;
+        lightbox.classList.add("open");
+      });
+    });
+
+    lightbox.addEventListener("click", () => {
+      lightbox.classList.remove("open");
+    });
+  </script>
+
+</body>
+
+</html>
