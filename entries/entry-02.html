@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Entry 02</title>
+
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+  <main>
+
+    <a href="../index.html" class="back-button"> <- Back</a>
+
+    <article>
+      <h1 class="home-title">Entry 01</h1>
+
+      <div class="entry-content">
+        A tired brainstorming session but very productive. It helped me to get a clearer picture on 
+        what I want to do for my thesis in a literal way. I think I have a better direction on what to 
+        research&reference from now on.
+        <br><br>
+        Here are the question that helped us locating the key words:
+      </div>
+    </article>
+
+    <img
+      src="../assets/images/entry02_questions.jpeg"
+      class="article-image"
+    >
+
+    <article>
+      <div class="entry-content">
+        <ul>
+          And notes are taken down, here are the details:
+        </ul>
+      </div>
+    </article>
+
+    <img
+      src="../assets/images/entry02_1.jpeg"
+      class="article-image"
+    >
+    <img
+      src="../assets/images/entry02_2.jpeg"
+      class="article-image"
+    >
+    <img
+      src="../assets/images/entry02_3.jpeg"
+      class="article-image"
+    >
+    <img
+      src="../assets/images/entry02_4.jpeg"
+      class="article-image"
+    >
+
+    <article>
+      <div class="entry-content">
+        <ul>
+          Lastly Gabriel commented a movie called The Transporter
+          that can potentially be a great reference to my concept. Will definitely check that out.
+        </ul>
+      </div>
+    </article>
+
+    <img
+      src="../assets/images/entry02_gab.jpeg"
+      class="article-image"
+    >
+
+    <div class="lightbox" id="lightbox">
+      <img id="lightbox-image" src="" alt="">
+    </div>
+
+  </main>
+
+  <script>
+    const images = document.querySelectorAll(".article-image");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightbox-image");
+
+    images.forEach((image) => {
+      image.addEventListener("click", () => {
+        lightboxImage.src = image.src;
+        lightbox.classList.add("open");
+      });
+    });
+
+    lightbox.addEventListener("click", () => {
+      lightbox.classList.remove("open");
+    });
+  </script>
+
+</body>
+
+</html>
